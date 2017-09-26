@@ -4,10 +4,12 @@ lazy val `mockserver-client-scala` = (project in file("."))
   .settings(scalaVersion := "2.11.8")
   .settings(organization := "com.github.unisay")
   .settings(licenses += ("MIT", url("http://opensource.org/licenses/MIT")))
-  .settings(publishMavenStyle := true)
+  .settings(publishMavenStyle := false)
   .settings(bintrayPackageLabels := Seq("mockserver", "scala", "rest", "testing"))
-  .settings(bintrayRepository := "maven")
-  .settings(bintrayOrganization := None)
+  .settings(bintrayRepository := "ivy2")
+  .settings(bintrayOrganization := Some("allixender"))
+  .settings(homepage := Some(url("https://index.scala-lang.org/unisay/mockserver-client-scala/mockserver-client-scala")))
+  .settings(bintrayVcsUrl := Some("https://github.com/unisay/mockserver-client-scala"))
   .settings(libraryDependencies ++= Seq(
     "org.mock-server"            %  "mockserver-client-java"      % "3.11",
     "org.slf4j"                  %  "slf4j-api"                   % "1.7.12",
